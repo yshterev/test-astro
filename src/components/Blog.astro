@@ -1,0 +1,107 @@
+---
+const operatingSystem = "Linux";
+const quantity = 3;
+const footwear = "boots";
+const student = true;
+
+const skillColor = "crimson";
+---
+
+<div class="relative min-h-screen bg-base-200">
+	<main class="flex flex-col gap-12 px-4 pb-16 pt-10 lg:pt-16 max-w-5xl mx-auto">
+		<section class="space-y-4 text-center">
+			<p class="text-sm uppercase tracking-[0.2em] text-primary/70">Blog</p>
+			<h1 class="text-3xl lg:text-4xl font-extrabold">
+				{operatingSystem} <span class="skill">{quantity}</span> {footwear}
+			</h1>
+			{student && <p class="text-base lg:text-lg text-base-content/70 max-w-2xl mx-auto">
+				These posts are static for now. Later, you can swap them for content collections or data
+				from your CMS or database.
+			</p>}
+		</section>
+
+		<section class="grid gap-6 md:grid-cols-2">
+			<article class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow">
+				<div class="card-body space-y-3">
+					<span class="badge badge-outline badge-primary w-fit">Getting started</span>
+					<h2 class="card-title text-xl">
+						Welcome to your Astro + DaisyUI starter
+					</h2>
+					<p class="text-sm text-base-content/70">
+						Learn how this starter is wired with Tailwind 4, DaisyUI, and dark theme so you can
+						focus on building content instead of configuration.
+					</p>
+					<div class="flex items-center justify-between text-xs text-base-content/60">
+						<span>5 min read</span>
+						<span>Draft · Will be dynamic</span>
+					</div>
+					<div class="card-actions justify-start">
+						<button class="btn btn-sm btn-primary">
+							Read story
+						</button>
+					</div>
+				</div>
+			</article>
+
+			<article class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow">
+				<div class="card-body space-y-3">
+					<span class="badge badge-outline badge-secondary w-fit">Design</span>
+					<h2 class="card-title text-xl">
+						Designing with DaisyUI components
+					</h2>
+					<p class="text-sm text-base-content/70">
+						Combine utility classes with DaisyUI’s component API to quickly sketch layouts,
+						iterate on themes, and keep your styles consistent.
+					</p>
+					<div class="flex items-center justify-between text-xs text-base-content/60">
+						<span>7 min read</span>
+						<span>Draft · Will be dynamic</span>
+					</div>
+					<div class="card-actions justify-start">
+						<button class="btn btn-sm btn-outline btn-secondary">
+							Read design tips
+						</button>
+					</div>
+				</div>
+			</article>
+
+			<article class="md:col-span-2 card bg-base-100 shadow-md hover:shadow-lg transition-shadow">
+				<div class="card-body space-y-3 lg:flex lg:items-center lg:gap-6">
+					<div class="flex-1 space-y-3">
+						<span class="badge badge-outline badge-accent w-fit">Changelog</span>
+						<h2 class="card-title text-xl">
+							What’s next: dynamic content & Supabase
+						</h2>
+						<p class="text-sm text-base-content/70">
+							This section will eventually be powered by real data. You can migrate these
+							static cards to Astro content collections or load posts dynamically from
+							Supabase.
+						</p>
+						<div class="flex flex-wrap gap-2 text-xs text-base-content/60">
+							<span class="badge badge-ghost">Content collections</span>
+							<span class="badge badge-ghost">Supabase</span>
+							<span class="badge badge-ghost">Migrations</span>
+						</div>
+					</div>
+					<div class="card-actions lg:flex-col lg:items-end lg:justify-between gap-3">
+						<button class="btn btn-sm btn-accent">
+							View roadmap
+						</button>
+						<button class="btn btn-sm btn-ghost">
+							Coming soon
+						</button>
+					</div>
+				</div>
+			</article>
+		</section>
+	</main>
+</div>
+
+<style define:vars={{skillColor}}>
+	.skill {
+		color: green;
+		color: var(--skillColor);
+		font-weight: bold;
+	}
+</style>
+

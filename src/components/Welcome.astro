@@ -1,192 +1,183 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+import background from "../assets/background.svg";
 ---
 
 <div class="relative min-h-screen bg-base-200">
-	<img
-		src={background.src}
-		alt=""
-		fetchpriority="high"
-		class="pointer-events-none fixed inset-0 -z-10 h-full w-full blur-3xl opacity-70"
-	/>
+  <img
+    src={background.src}
+    alt=""
+    fetchpriority="high"
+    class="pointer-events-none fixed inset-0 -z-10 h-full w-full blur-3xl opacity-70"
+  />
 
-	<header class="navbar bg-base-100/80 sticky top-0 z-10 backdrop-blur">
-		<div class="navbar-start">
-			<a href="https://astro.build" class="btn btn-ghost gap-2">
-				<img
-					src={astroLogo.src}
-					width="32"
-					height="32"
-					alt="Astro"
-					class="h-8 w-auto"
-				/>
-				<span class="font-bold normal-case text-lg">Astro Starter</span>
-			</a>
-		</div>
-		<div class="navbar-end hidden md:flex gap-2">
-			<a href="https://docs.astro.build" class="btn btn-ghost btn-sm">Docs</a>
-			<a href="https://astro.build/chat" class="btn btn-ghost btn-sm">Discord</a>
-		</div>
-	</header>
+  <main class="flex flex-col gap-16 px-4 pb-16 pt-10 lg:pt-16">
+    <section class="hero">
+      <div class="hero-content flex-col lg:flex-row-reverse gap-10 lg:gap-16">
+        <div class="mockup-window border bg-base-300 max-w-md lg:max-w-lg">
+          <div class="bg-base-200 px-6 py-8 space-y-3">
+            <p class="font-mono text-xs text-base-content/60">
+              src/pages/index.astro
+            </p>
+            <p class="font-mono text-sm">
+              npm run dev
+              <span class="text-success ml-2"># start building</span>
+            </p>
+            <p class="font-mono text-sm">
+              npm run build
+              <span class="text-info ml-2"># ship to production</span>
+            </p>
+          </div>
+        </div>
 
-	<main class="flex flex-col gap-16 px-4 pb-16 pt-10 lg:pt-16">
-		<section class="hero">
-			<div class="hero-content flex-col lg:flex-row-reverse gap-10 lg:gap-16">
-				<div class="mockup-window border bg-base-300 max-w-md lg:max-w-lg">
-					<div class="bg-base-200 px-6 py-8 space-y-3">
-						<p class="font-mono text-xs text-base-content/60">src/pages/index.astro</p>
-						<p class="font-mono text-sm">
-							npm run dev
-							<span class="text-success ml-2"># start building</span>
-						</p>
-						<p class="font-mono text-sm">
-							npm run build
-							<span class="text-info ml-2"># ship to production</span>
-						</p>
-					</div>
-				</div>
+        <div class="space-y-6 max-w-xl">
+          <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight">
+            Build your first Astro <span class="text-primary">landing page</span
+            >.
+          </h1>
+          <p class="text-base lg:text-lg text-base-content/70">
+            Tailwind CSS + DaisyUI are ready to go. Edit your components in
+            <code class="badge badge-neutral font-mono text-xs mx-1"
+              >src/components</code
+            >
+            and see changes instantly.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="https://docs.astro.build"
+              class="btn btn-primary gap-2"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Start with Astro docs
+            </a>
+            <a
+              href="https://daisyui.com/components/"
+              class="btn btn-outline btn-secondary"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Browse DaisyUI components
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<div class="space-y-6 max-w-xl">
-					<h1 class="text-4xl lg:text-5xl font-extrabold leading-tight">
-						Build your first Astro <span class="text-primary">landing page</span>.
-					</h1>
-					<p class="text-base lg:text-lg text-base-content/70">
-						Tailwind CSS + DaisyUI are ready to go. Edit your components in
-						<code class="badge badge-neutral font-mono text-xs mx-1">src/components</code>
-						and see changes instantly.
-					</p>
-					<div class="flex flex-wrap gap-3">
-						<a
-							href="https://docs.astro.build"
-							class="btn btn-primary gap-2"
-							rel="noreferrer"
-							target="_blank"
-						>
-							Start with Astro docs
-						</a>
-						<a
-							href="https://daisyui.com/components/"
-							class="btn btn-outline btn-secondary"
-							rel="noreferrer"
-							target="_blank"
-						>
-							Browse DaisyUI components
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section class="max-w-5xl mx-auto">
+      <h2 class="text-2xl lg:text-3xl font-bold mb-6 text-center">
+        What’s in this starter?
+      </h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="card bg-base-100 shadow-md">
+          <div class="card-body">
+            <h3 class="card-title text-lg">Astro 6 Beta</h3>
+            <p class="text-sm text-base-content/70">
+              Modern, content-focused Astro with islands architecture and fast
+              dev experience.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+          <div class="card-body">
+            <h3 class="card-title text-lg">Tailwind 4 + DaisyUI</h3>
+            <p class="text-sm text-base-content/70">
+              Utility-first styling plus prebuilt components like buttons,
+              navbars, and cards.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+          <div class="card-body">
+            <h3 class="card-title text-lg">Developer Experience</h3>
+            <p class="text-sm text-base-content/70">
+              Hot reloading, type-safe config, and a clean layout ready for your
+              own sections.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section class="max-w-5xl mx-auto">
-			<h2 class="text-2xl lg:text-3xl font-bold mb-6 text-center">
-				What’s in this starter?
-			</h2>
-			<div class="grid gap-6 md:grid-cols-3">
-				<div class="card bg-base-100 shadow-md">
-					<div class="card-body">
-						<h3 class="card-title text-lg">Astro 6 Beta</h3>
-						<p class="text-sm text-base-content/70">
-							Modern, content-focused Astro with islands architecture and fast dev experience.
-						</p>
-					</div>
-				</div>
-				<div class="card bg-base-100 shadow-md">
-					<div class="card-body">
-						<h3 class="card-title text-lg">Tailwind 4 + DaisyUI</h3>
-						<p class="text-sm text-base-content/70">
-							Utility-first styling plus prebuilt components like buttons, navbars, and cards.
-						</p>
-					</div>
-				</div>
-				<div class="card bg-base-100 shadow-md">
-					<div class="card-body">
-						<h3 class="card-title text-lg">Developer Experience</h3>
-						<p class="text-sm text-base-content/70">
-							Hot reloading, type-safe config, and a clean layout ready for your own sections.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section class="max-w-5xl mx-auto">
+      <h2 class="text-2xl lg:text-3xl font-bold mb-6 text-center">
+        DaisyUI button sampler
+      </h2>
+      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div class="card bg-base-100 shadow-sm">
+          <div class="card-body gap-3">
+            <h3 class="card-title text-base">Sizes</h3>
+            <div class="flex flex-wrap items-center gap-2">
+              <button class="btn btn-xs btn-primary">xs</button>
+              <button class="btn btn-sm btn-primary">sm</button>
+              <button class="btn btn-primary">md</button>
+              <button class="btn btn-lg btn-primary">lg</button>
+            </div>
+          </div>
+        </div>
 
-		<section class="max-w-5xl mx-auto">
-			<h2 class="text-2xl lg:text-3xl font-bold mb-6 text-center">
-				DaisyUI button sampler
-			</h2>
-			<div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-				<div class="card bg-base-100 shadow-sm">
-					<div class="card-body gap-3">
-						<h3 class="card-title text-base">Sizes</h3>
-						<div class="flex flex-wrap items-center gap-2">
-							<button class="btn btn-xs btn-primary">xs</button>
-							<button class="btn btn-sm btn-primary">sm</button>
-							<button class="btn btn-primary">md</button>
-							<button class="btn btn-lg btn-primary">lg</button>
-						</div>
-					</div>
-				</div>
+        <div class="card bg-base-100 shadow-sm">
+          <div class="card-body gap-3">
+            <h3 class="card-title text-base">Colors</h3>
+            <div class="flex flex-wrap items-center gap-2">
+              <button class="btn btn-primary">Primary</button>
+              <button class="btn btn-secondary">Secondary</button>
+              <button class="btn btn-accent">Accent</button>
+              <button class="btn btn-info">Info</button>
+              <button class="btn btn-success">Success</button>
+              <button class="btn btn-warning">Warning</button>
+              <button class="btn btn-error">Error</button>
+            </div>
+          </div>
+        </div>
 
-				<div class="card bg-base-100 shadow-sm">
-					<div class="card-body gap-3">
-						<h3 class="card-title text-base">Colors</h3>
-						<div class="flex flex-wrap items-center gap-2">
-							<button class="btn btn-primary">Primary</button>
-							<button class="btn btn-secondary">Secondary</button>
-							<button class="btn btn-accent">Accent</button>
-							<button class="btn btn-info">Info</button>
-							<button class="btn btn-success">Success</button>
-							<button class="btn btn-warning">Warning</button>
-							<button class="btn btn-error">Error</button>
-						</div>
-					</div>
-				</div>
+        <div class="card bg-base-100 shadow-sm">
+          <div class="card-body gap-3">
+            <h3 class="card-title text-base">Variants</h3>
+            <div class="flex flex-wrap items-center gap-2">
+              <button class="btn btn-outline btn-primary">Outline</button>
+              <button class="btn btn-ghost">Ghost</button>
+              <button class="btn btn-link">Link</button>
+              <button class="btn btn-neutral btn-active">Active</button>
+              <button class="btn btn-disabled" disabled>Disabled</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<div class="card bg-base-100 shadow-sm">
-					<div class="card-body gap-3">
-						<h3 class="card-title text-base">Variants</h3>
-						<div class="flex flex-wrap items-center gap-2">
-							<button class="btn btn-outline btn-primary">Outline</button>
-							<button class="btn btn-ghost">Ghost</button>
-							<button class="btn btn-link">Link</button>
-							<button class="btn btn-neutral btn-active">Active</button>
-							<button class="btn btn-disabled" disabled>Disabled</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="max-w-3xl mx-auto">
-			<div class="card bg-gradient-to-r from-primary to-secondary text-primary-content shadow-xl">
-				<div class="card-body items-center text-center space-y-4">
-					<h2 class="card-title text-2xl lg:text-3xl">
-						Ready to customize this landing page?
-					</h2>
-					<p class="text-sm lg:text-base max-w-xl">
-						Duplicate this component, tweak the content, and remix the layout using DaisyUI
-						classes. Your Astro app will update live in the browser.
-					</p>
-					<div class="card-actions justify-center">
-						<a
-							href="https://docs.astro.build/en/getting-started/"
-							class="btn btn-outline btn-sm md:btn-md"
-							target="_blank"
-							rel="noreferrer"
-						>
-							Open Getting Started Guide
-						</a>
-						<a
-							href="https://daisyui.com/docs/customize/"
-							class="btn btn-sm md:btn-md"
-							target="_blank"
-							rel="noreferrer"
-						>
-							Customize theme
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-	</main>
+    <section class="max-w-3xl mx-auto">
+      <div
+        class="card bg-gradient-to-r from-primary to-secondary text-primary-content shadow-xl"
+      >
+        <div class="card-body items-center text-center space-y-4">
+          <h2 class="card-title text-2xl lg:text-3xl">
+            Ready to customize this landing page?
+          </h2>
+          <p class="text-sm lg:text-base max-w-xl">
+            Duplicate this component, tweak the content, and remix the layout
+            using DaisyUI classes. Your Astro app will update live in the
+            browser.
+          </p>
+          <div class="card-actions justify-center">
+            <a
+              href="https://docs.astro.build/en/getting-started/"
+              class="btn btn-outline btn-sm md:btn-md"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open Getting Started Guide
+            </a>
+            <a
+              href="https://daisyui.com/docs/customize/"
+              class="btn btn-sm md:btn-md"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Customize theme
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </div>

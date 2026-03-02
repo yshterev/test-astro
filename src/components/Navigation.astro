@@ -12,14 +12,14 @@ import astroLogo from "../assets/astro.svg";
         alt="Astro"
         class="h-8 w-auto"
       />
-      <span class="font-bold normal-case text-lg">Astro Starter</span>
+      <span class="text-lg font-bold normal-case">Astro Starter</span>
     </a>
   </div>
-  <div class="navbar-end hidden md:flex gap-2">
+  <div class="navbar-end hidden gap-2 md:flex">
     <a
       href="https://docs.astro.build"
       id="test-btn"
-      class="btn btn-ghost btn-sm">Docs</a
+      class="btn btn-ghost btn-sm">Test JS</a
     >
     <a href="https://astro.build/chat" class="btn btn-ghost btn-sm">Discord</a>
   </div>
@@ -31,7 +31,7 @@ import astroLogo from "../assets/astro.svg";
   menu?.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
-    console.log("");
+    console.log("Button click!!!");
     // const isExpanded = menu.getAttribute('aria-expanded') === 'true';
     // menu.setAttribute('aria-expanded', `${!isExpanded}`);
   });
